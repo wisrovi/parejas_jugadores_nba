@@ -1,4 +1,9 @@
-# 1) Proyecto
+# **Tabla de Contenido**
+- [Proyecto](#1.Proyecto)
+- [Datos Autor](#Autor)
+
+
+# 1.Proyecto
 El proyecto consiste en crear una funcion que busca los jugadores de la NBA
 basado en la entrada del usuario. Los datos originalmente vienen de
 [aquí](https://www.openintro.org/data/index.php?data=nba_heights). Para facilidad
@@ -133,7 +138,7 @@ OK
 Cabe recalcar que para ejecutar este test unitario es necesario haber creado una maquina virtual cuyos pasos estan en el numeral 2.1.1) si la prueba se realizara en un equipo windows o 2.1.2) si ejecutara el test en linux.
 
 
-# Datos Autor:
+#Autor:
 
 Nombre: William Steve Rodriguez Villamizar
 
