@@ -1,4 +1,4 @@
-#1) Proyecto
+# 1) Proyecto
 El proyecto consiste en crear una funcion que busca los jugadores de la NBA
 basado en la entrada del usuario. Los datos originalmente vienen de
 [aquí](https://www.openintro.org/data/index.php?data=nba_heights). Para facilidad
@@ -23,7 +23,7 @@ funcionar correctamente en todos los casos de borde. Esta _no_ es una prueba a
 libro cerrado. Lo invitamos a contactarnos con cualquier duda que tenga.
 
 
-#2) Preparar el entorno para ejecutar la solución
+# 2) Preparar el entorno para ejecutar la solución
 
 ## 2.1) Maquina virtual
 primeramente se debe crear una maquina virtual, ya sea con *pipeenv*, *virtualenv* u otro de su preferencia
@@ -77,7 +77,7 @@ Si elegiste la opción de docker en el 2.2), puedes obviar este paso
 ```
 uvicorn xxxxx
 ```
-##4.2) Probar la web
+## 4.2) Probar la web
 
 Cargar la url: http://ip_server/
 ```
