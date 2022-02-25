@@ -1,9 +1,12 @@
-#pip install jinja2
+# pip install jinja2
+# pip install "uvicorn[standard]"
+# pip install python-multipart
 
-from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
-from pydantic import BaseModel
+from fastapi import FastAPI, Request, Form
 from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
+
+from lib.BusquedaHeuristica import BusquedaHeuristica
 
 templates = Jinja2Templates(directory="templates")
 
@@ -22,15 +25,30 @@ class Rta(BaseModel):
     data: list[Rta_base]
 
 
-@app.get("/", response_class=HTMLResponse)
-async def create_item():
-    return templates.TemplateResponse("response.html", {})
+@app.get('/')
+def read_form():
+    return 'hello world'
 
 
-@app.post("/response")
-async def root(value: Value):
-    datos = Rta_base(parejas=("queso", "pan"))
-    listado_datos = [datos]
-    rta = Rta(data=listado_datos)
-    return rta
+@app.get("/form")
+async def form_post(request: Request):
+    result = "Type a number"
+    data = []
+    inicial = 139
+    return templates.TemplateResponse('form.html', context={'request': request, 'result': result, 'data': data, 'inicial': inicial})
+
+
+@app.post("/form")
+async def form_post(request: Request, num: int = Form(...)):
+    rp = BusquedaHeuristica("https://mach-eight.uc.r.appspot.com/")
+    rp.search(num)
+    rta = rp.solve(False)
+    if rta is not None:
+        data = rta
+        result = ""
+    else:
+        data = []
+        result = "No se encontraron coincidencias"
+
+    return templates.TemplateResponse('form.html', context={'request': request, 'result': result, 'data': data, 'inicial': num})
 

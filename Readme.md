@@ -11,7 +11,7 @@
   - [4.2. Probar la web](#4.2.-Probar-la-web)
 - [5. Documentación swagger](#5.-Documentación-swagger)
 - [6. Test Unit](#6.-Test-Unit)
-- [Datos Autor](#Autor)
+- [7. Datos Autor](#Autor)
 
 
 #1. Proyecto
@@ -149,7 +149,7 @@ OK
 Cabe recalcar que para ejecutar este test unitario es necesario haber creado una maquina virtual cuyos pasos estan en el numeral 2.1.1) si la prueba se realizara en un equipo windows o 2.1.2) si ejecutara el test en linux.
 
 
-#Autor:
+#7. Autor:
 
 Nombre: William Steve Rodriguez Villamizar
 
@@ -157,7 +157,7 @@ Email: wisrovi.rodriguez@gmail.com
 
 movil: +57 300 438 1810
 
-linkedin: https://www.linkedin.com/in/wisrovi-rodriguez/
+linkedin: [WISROVI](https://www.linkedin.com/in/wisrovi-rodriguez/)
 
 
 
