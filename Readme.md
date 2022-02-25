@@ -70,6 +70,19 @@ Con la combinación de estas tres métodos de solucion de algoritmos, se logra l
 
 Superando el algoritmo de busqueda por fuerza bruta (también adjunto en el repositorio, pero sin pruebas unitarias), cuya complejidad es O(n^2)
 
+Otro factor a tener en cuenta es que no todos los valores den entrada darian una lista de parejas que cumpla la condicion del problema, entonces se presenta el siguiente grafico que muestra las opciones con respuesta
+
+![Image text](lib/histograma_posibles_soluciones.png)
+
+Valores por debajo del minimo (ver gráfica) o por encima del maximo (ver gráfica) darian como resultado el mensaje: ```No se encontraron coincidencias```
+
+
+```
+Nota: Este gráfico fue realizado con la instrucción (dentro de la maquina virtual):
+
+python histograma.py
+```
+
 # 4) Ejecutar la solución
 
 ## 4.1) Lanzar la aplicación
