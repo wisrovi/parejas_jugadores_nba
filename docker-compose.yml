@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+   buscador_coincidencias:
+      image: buscador_coincidencias:v1
+      container_name: buscador_coincidencias
+      ports:
+         - 80:80

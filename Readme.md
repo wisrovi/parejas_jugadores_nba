@@ -46,18 +46,18 @@ primeramente se debe crear una maquina virtual, ya sea con *pipeenv*, *virtualen
 
 ```
 pip install virtualenv
-
-virtualenv env
 ```
 
 ###2.1.1. Linux
 ```
+virtualenv env
 source ./env/bin/activate
 pip install -r requirements.txt
 ```
 
 ###2.1.2. Windows
 ```
+python -m venv env
 env\Scripts\activate
 pip install -r requirements.txt
 ```
@@ -72,6 +72,8 @@ Nota: recuerde que para salir del entorno debe ejecutar:
 Yo de preferencia recomendaría usar un contenedor docker, 
 simplemente basta con ejecutar el docker-compose adjunto en este repositorio
 ```
+docker build -t "buscador_coincidencias:v1" .
+
 docker-compose up -d
 ```
 
@@ -104,7 +106,7 @@ python histograma.py
 ##4.1. Lanzar la aplicación
 Si elegiste la opción de docker en el 2.2), puedes obviar este paso
 ```
-uvicorn xxxxx
+uvicorn main:app --host 0.0.0.0 --port 80
 ```
 ##4.2. Probar la web
 
@@ -113,7 +115,7 @@ Cargar la url: http://ip_server/
 Nota: Si se esta trabajando desde el mismo ordenador donde se lanzo la aplicación, 
 - ip_server = localhost
 ```
-
+![Image text](demo_web.png)
 ```
 4.2.1) Entregar un parametro en el cuadro de texto
 4.2.2) enviar el dato
@@ -129,6 +131,7 @@ http://ip_server/docs
 Nota: Si se esta trabajando desde el mismo ordenador donde se lanzo la aplicación, 
 - ip_server = localhost
 ```
+![Image text](demo_Swagger.png)
 
 
 #6. Test Unit

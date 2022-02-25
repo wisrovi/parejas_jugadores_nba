@@ -71,7 +71,7 @@ class BusquedaHeuristica(Base):
 
         for temp in temporal:
             opc1, opc2 = temp, (temp[1], temp[0])
-            if (opc1 not in self.personas) and (opc2 not in self.personas):
+            if (opc1 not in self.personas) and (opc2 not in self.personas) and (temp[1] != temp[0]):
                 self.personas.append(temp)
 
     # @calcular_tiempo  # Decorador para medir el tiempo de ejecución usado por el algoritmo para resolver el problema
